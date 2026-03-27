@@ -161,7 +161,7 @@ def query(): # pragma: no cover
 def log(): # pragma: no cover
 	# codecov done in test_log()
 	ret = { "status":"OK" }
-	json = request.get_json()
+	json = request.get_json() or []
 	if 'executable' in json and 'image' in json and 'user' in json and 'path' in json:
 		if not 'timestamp' in json:
 			json["timestamp"] = get_current_timestamp()
