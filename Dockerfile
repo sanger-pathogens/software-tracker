@@ -1,7 +1,7 @@
 #########################################################################
 # Mount a config.json file into the container if running outside of K8s #
 #########################################################################
-FROM gitlab-registry.internal.sanger.ac.uk/sanger-pathogens/shelf/docker-registry/python:3.12-alpine
+FROM python:3.12-alpine
 
 ARG     SERVICE_USER="paso"
 ARG     SERVICE_GROUP="$SERVICE_USER"
